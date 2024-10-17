@@ -102,7 +102,7 @@ body {
 .container-register button:hover {
   background-color: var(--primary-hover);
 }
-.container-register .register-link {
+.container-register #login-link {
   color: var(--second-color);
   font-size: 12px;
   padding: 5px 0px;
