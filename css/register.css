@@ -66,6 +66,7 @@ body {
   background-color: var(--bg-color);
   border: 1px solid var(--second-color);
   border-radius: 10px;
+  color: var(--second-color);
   font-size: 12px;
   padding: 5px;
   width: 100%;
@@ -132,8 +133,27 @@ body {
 }
 /* media query para sobremesas */
 @media screen and (min-width: 1025px) {
+  body {
+    background-color: hsla(240, 62%, 58%, 1);
+    background-image: radial-gradient(
+        at 37% 94%,
+        hsla(240, 62%, 58%, 1) 0px,
+        transparent 50%
+      ),
+      radial-gradient(at 3% 43%, hsla(240, 45%, 41%, 1) 0px, transparent 50%),
+      radial-gradient(at 57% 35%, hsla(241, 47%, 52%, 1) 0px, transparent 50%);
+  }
   .container-register {
-    padding: 20px 150px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background: var(--bg-color);
+    height: 100%;
+    position: fixed;
+    right: 0;
+    padding: 0 100px;
+    border-radius: 0;
   }
   .container-register h1 {
     font-size: 40px;
