@@ -80,6 +80,12 @@ body {
   font-size: 12px;
   padding: 5px;
 }
+.container-register .errorSpan {
+  width: 100%;
+  font-size: 12px;
+  text-align: start;
+  color: rgb(255, 0, 0);
+}
 .container-register form a {
   color: var(--second-color);
   font-size: 12px;
