@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+:root {
+  --primary-color: #504dc0;
+  --second-color: #8b9aee;
+  --bg-color: #eff4fe;
+  --primary-hover: #3b3a99;
+  --shadow-color: #ccd7f9;
+}
+.darkMode {
+  --bg-color: #0a0f19;
+  --shadow-color: #161e2c;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+img {
+  height: 200px;
+  width: 200px;
+}
+body {
+  align-items: center;
+  background-color: var(--bg-color);
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+}
+.container-login {
+  align-items: center;
+  border: 1px solid var(--bg-color);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 32px 40px;
+  -webkit-box-shadow: 0px 4px 44px 9px var(--shadow-color);
+  -moz-box-shadow: 0px 4px 44px 9px var(--shadow-color);
+  box-shadow: 0px 4px 44px 9px var(--shadow-color);
+}
+.container-login h1 {
+  color: var(--primary-color);
+  font-size: 32px;
+}
+.container-login span {
+  color: var(--second-color);
+  font-size: 12px;
+  text-align: center;
+  width: 200px;
+}
+.container-login form {
+  color: var(--primary-color);
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+  gap: 5px;
+  width: 80%;
+}
+.container-login form input {
+  background-color: var(--bg-color);
+  border: 1px solid var(--second-color);
+  border-radius: 10px;
+  font-size: 12px;
+  padding: 5px;
+  width: 100%;
+}
+.container-login form input:focus {
+  color: var(--second-color);
+  font-size: 12px;
+  outline: 0.5px solid var(--primary-color);
+}
+.container-login ::placeholder {
+  color: var(--second-color);
+  font-size: 12px;
+  padding: 5px;
+}
+.container-login form a {
+  color: var(--second-color);
+  font-size: 12px;
+  padding: 5px 0px;
+  text-align: center;
+}
+.container-login button {
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: 10px;
+  color: #fefefe;
+  font-weight: 600;
+  margin: 5px;
+  padding: 10px 0px;
+  -webkit-box-shadow: 0px 4px 32px 2px rgba(80, 77, 192, 0.62);
+  -moz-box-shadow: 0px 4px 32px 2px rgba(80, 77, 192, 0.62);
+  box-shadow: 0px 4px 32px 2px rgba(80, 77, 192, 0.62);
+  transition: 0.2s;
+}
+.container-login button:hover {
+  background-color: var(--primary-hover);
+}
+.container-login .register-link {
+  color: var(--second-color);
+  font-size: 12px;
+  padding: 5px 0px;
+  text-align: center;
+}
+#darkMode {
+  background-color: var(--bg-color);
+  color: var(--primary-color);
+  border: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  padding: 5px;
+  margin: 10px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 4px 35px -10px var(--shadow-color);
+  -moz-box-shadow: 0px 4px 35px -10px var(--shadow-color);
+  box-shadow: 0px 4px 35px -10px var(--shadow-color);
+}
+/* media query para sobremesas */
+@media screen and (min-width: 1025px) {
+  .container-login {
+    padding: 20px 150px;
+  }
+  .container-login h1 {
+    font-size: 40px;
+  }
+  .container-login span {
+    font-size: 16px;
+    width: 250px;
+  }
+  .container-login img {
+    width: 400px;
+    height: 400px;
+  }
+  .container-login form {
+    font-size: 16px;
+    gap: 10px;
+  }
+  .container-login form input {
+    padding: 10px;
+  }
+}
