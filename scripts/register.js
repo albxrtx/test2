@@ -4,12 +4,12 @@ document.addEventListener("DOMContentLoaded", function () {
   nameInput.addEventListener("input", function () {
     let inputValue = document.getElementById("name-input").value;
 
-    if (inputValue.length < 2) {
+    if (inputValue.length <= 2) {
       error.textContent = "Debe contener más de 2 caracteres";
       nameInput.style.borderColor = "red";
       nameInput.style.outlineColor = "red";
       nameInput.style.color = "red";
-    } else if (inputValue.length > 16) {
+    } else if (inputValue.length >= 16) {
       error.textContent = "Debe contener menos de 16 caracteres";
       nameInput.style.borderColor = "red";
       nameInput.style.outlineColor = "red";
