@@ -44,7 +44,7 @@ img {
 }
 body {
   position: relative;
-  height: 90svh;
+  height: 100svh;
   display: flex;
   align-items: center;
   justify-content: center;
