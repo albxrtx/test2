@@ -1,9 +1,10 @@
 document.addEventListener("DOMContentLoaded", function () {
   let nameInput = document.getElementById("name-input");
   let error = document.querySelector(".errorSpan");
+  let simbolos = /[!@#$%^&*()_+·~\-=\[\]{};':"\\|,.<>\/?]+/;
+  let numeros = /[123456789]/;
   nameInput.addEventListener("input", function () {
     let inputValue = document.getElementById("name-input").value;
-    let simbolos = /[!@#$%^&*()_+·~\-=\[\]{};':"\\|,.<>\/?]+/;
 
     if (inputValue.length <= 2) {
       error.textContent = "Debe contener más de 2 caracteres";
@@ -24,6 +25,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (simbolos.test(inputValue)) {
       error.textContent = "Contiene simbolos (!·$%&/)";
+      nameInput.style.borderColor = "red";
+      nameInput.style.outlineColor = "red";
+      nameInput.style.color = "red";
+    }
+
+    if (numeros.test(inputValue)) {
+      error.textContent = "Contiene números (0-9)";
       nameInput.style.borderColor = "red";
       nameInput.style.outlineColor = "red";
       nameInput.style.color = "red";
