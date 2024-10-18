@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   let nameInput = document.getElementById("name-input");
   let error = document.querySelector(".errorSpan");
-  let simbolos = /[!@#$%^&*()_+·~\-=\[\]{};':"\\|,.<>\/?]/;
+  let simbolos = /[@#€_&\-+()/*·"':;!?.,~`|•√π÷×§∆£¥$¢^°={}%©®™✓[\]<>]/;
   let numeros = /[123456789]/;
 
   nameInput.addEventListener("input", function () {
@@ -58,11 +58,10 @@ document.addEventListener("DOMContentLoaded", function () {
       passInput.style.outlineColor = "red";
       passInput.style.color = "red";
     } else if (
-      inputValue.length > 5 &&
-      !simbolos.test(inputValue) &&
+      (inputValue.length > 5 && !simbolos.test(inputValue)) ||
       !numeros.test(inputValue)
     ) {
-      passError.textContent = "La contraseña debe contener numeros o simbolos";
+      passError.textContent = "La contraseña debe contener numeros y simbolos";
       passInput.style.borderColor = "red";
       passInput.style.outlineColor = "red";
       passInput.style.color = "red";
@@ -79,5 +78,11 @@ document.addEventListener("DOMContentLoaded", function () {
       passInput.style.outlineColor = "";
       passInput.style.color = "";
     }
+  });
+
+  let botonEye = document.getElementById("eye-icon");
+  botonEye.addEventListener("click", function () {
+    if (passInput.type == "password") passInput.type = "text";
+    else passInput.type = "password";
   });
 });

@@ -28,7 +28,7 @@ img {
   width: 150px;
 }
 body {
-  height: 80vh;
+  height: 100svh;
   display: flex;
   background-color: var(--bg-color);
   background-color: hsla(241, 47%, 52%, 1);
@@ -95,6 +95,15 @@ body {
   font-size: 12px;
   text-align: start;
   color: rgb(255, 0, 0);
+}
+.container-register .container-password {
+  position: relative;
+}
+.container-register .container-password #eye-icon {
+  width: 16px;
+  position: absolute;
+  top: 26px;
+  right: 13px;
 }
 .container-register form a {
   color: var(--second-color);
@@ -189,5 +198,14 @@ body {
   }
   .container-register form button {
     margin: 15px 0;
+  }
+  .container-register .container-password {
+    position: relative;
+  }
+  .container-register .container-password #eye-icon {
+    width: 16px;
+    position: absolute;
+    top: 37px;
+    right: 15px;
   }
 }
