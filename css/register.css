@@ -43,7 +43,6 @@ body {
   margin: 50px 50px;
   align-items: center;
   height: 100%;
-  width: 100%;
   background-color: var(--bg-color);
   border: 1px solid var(--bg-color);
   border-radius: 10px;
@@ -91,7 +90,7 @@ body {
   font-size: 12px;
   padding: 5px;
 }
-.container-register .errorSpan {
+.container-register .error {
   width: 100%;
   font-size: 12px;
   text-align: start;
@@ -161,9 +160,10 @@ body {
     height: 100px;
   }
   .container-register {
+    width: 35%;
+    margin: 0;
     justify-content: center;
     background: var(--bg-color);
-    height: 100%;
     position: fixed;
     right: 0;
     padding: 0 100px;
@@ -182,9 +182,12 @@ body {
   }
   .container-register form {
     font-size: 16px;
-    gap: 10px;
+    gap: 5px;
   }
   .container-register form input {
     padding: 10px;
+  }
+  .container-register form button {
+    margin: 15px 0;
   }
 }

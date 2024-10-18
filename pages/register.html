@@ -15,13 +15,24 @@
         alt=""
       />
       <form action="">
-        <label for="">Nombre de usuario</label>
+        <label for="name-input">Nombre de usuario</label>
         <input id="name-input" type="text" placeholder="Usuario" required />
-        <span class="errorSpan"></span>
-        <label for="">Correo eletrónico</label>
-        <input type="email" placeholder="correo@electrónico.com" required />
-        <label for="">Contraseña</label>
-        <input type="password" placeholder="Contraseña" required />
+        <span class="errorSpan error"></span>
+        <label for="email-input">Correo eletrónico</label>
+        <input
+          id="email-input"
+          type="email"
+          placeholder="correo@electrónico.com"
+          required
+        />
+        <label for="password-input">Contraseña</label>
+        <input
+          id="password-input"
+          type="password"
+          placeholder="Contraseña"
+          required
+        />
+        <span class="passError error"></span>
         <button type="submit">Registrarse</button>
       </form>
       <a href="../index.html" id="login-link"
