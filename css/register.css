@@ -24,12 +24,14 @@ a:hover {
   text-decoration: underline;
 }
 img {
-  height: 150px;
-  width: 150px;
+  height: 200px;
+  width: 200px;
 }
 body {
-  height: 100svh;
+  height: 80svh;
   display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: var(--bg-color);
   background-color: hsla(241, 47%, 52%, 1);
   background-image: radial-gradient(
@@ -40,22 +42,21 @@ body {
     radial-gradient(at 0% 0%, rgb(116, 142, 238) 0px, transparent 50%);
 }
 .container-register {
-  margin: 50px 50px;
+  width: 90%;
   align-items: center;
-  height: 100%;
   background-color: var(--bg-color);
   border: 1px solid var(--bg-color);
   border-radius: 10px;
   display: flex;
   flex-direction: column;
-  padding: 32px 40px;
+  padding: 50px 0;
   -webkit-box-shadow: 0px 4px 44px 9px var(--shadow-color);
   -moz-box-shadow: 0px 4px 44px 9px var(--shadow-color);
   box-shadow: 0px 4px 44px 9px var(--shadow-color);
 }
 .container-register h1 {
   color: var(--primary-color);
-  font-size: 32px;
+  font-size: 36px;
 }
 .container-register span {
   color: var(--second-color);
@@ -68,10 +69,15 @@ body {
   display: flex;
   flex-direction: column;
   font-size: 12px;
-  width: 80%;
-  gap: 10px;
+  gap: 15px;
+  width: 65%;
 }
-.container-register form input {
+.container-register .container-input {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.container-register form .container-input input {
   background-color: var(--bg-color);
   border: 1px solid var(--second-color);
   border-radius: 10px;
@@ -96,14 +102,14 @@ body {
   text-align: start;
   color: rgb(255, 0, 0);
 }
-.container-register .container-password {
+.container-register .container-input {
   position: relative;
 }
-.container-register .container-password #eye-icon {
+.container-register .container-input #eye-icon {
   width: 16px;
   position: absolute;
-  top: 26px;
-  right: 13px;
+  top: 30px;
+  right: 10px;
 }
 .container-register form a {
   color: var(--second-color);
@@ -132,6 +138,7 @@ body {
   font-size: 12px;
   padding: 5px 0px;
   text-align: center;
+  width: 150px;
 }
 #darkMode {
   background: none;
