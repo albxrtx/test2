@@ -4,7 +4,8 @@
   --second-color: #8b9aee;
   --bg-color: #eff4fe;
   --primary-hover: #3b3a99;
-  --shadow-color: #ccd7f9;
+  --shadow-color: #201f47;
+  --color-white: #fefefe;
 }
 .darkMode {
   --bg-color: #0a0f19;
@@ -23,18 +24,25 @@ a:hover {
   text-decoration: underline;
 }
 img {
-  height: 200px;
-  width: 200px;
+  height: 150px;
+  width: 150px;
 }
 body {
-  align-items: center;
-  background-color: var(--bg-color);
   display: flex;
-  height: 100vh;
-  justify-content: center;
+  background-color: var(--bg-color);
+  background-color: hsla(241, 47%, 52%, 1);
+  background-image: radial-gradient(
+      at 47% 100%,
+      hsla(240, 60%, 26%, 1) 0px,
+      transparent 50%
+    ),
+    radial-gradient(at 0% 0%, rgb(116, 142, 238) 0px, transparent 50%);
 }
 .container-register {
+  margin: 50px auto;
   align-items: center;
+  height: 100%;
+  background-color: var(--bg-color);
   border: 1px solid var(--bg-color);
   border-radius: 10px;
   display: flex;
@@ -59,7 +67,6 @@ body {
   display: flex;
   flex-direction: column;
   font-size: 12px;
-  gap: 5px;
   width: 80%;
 }
 .container-register form input {
@@ -101,9 +108,9 @@ body {
   font-weight: 600;
   margin: 5px;
   padding: 10px 0px;
-  -webkit-box-shadow: 0px 4px 32px 2px rgba(80, 77, 192, 0.62);
+  /* -webkit-box-shadow: 0px 4px 32px 2px rgba(80, 77, 192, 0.62);
   -moz-box-shadow: 0px 4px 32px 2px rgba(80, 77, 192, 0.62);
-  box-shadow: 0px 4px 32px 2px rgba(80, 77, 192, 0.62);
+  box-shadow: 0px 4px 32px 2px rgba(80, 77, 192, 0.62); */
   transition: 0.2s;
 }
 .container-register button:hover {
@@ -116,10 +123,10 @@ body {
   text-align: center;
 }
 #darkMode {
-  background-color: var(--bg-color);
-  color: var(--primary-color);
+  background: none;
+  color: var(--color-white);
   border: none;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   left: 0;
   width: 50px;
@@ -127,21 +134,22 @@ body {
   padding: 5px;
   margin: 10px;
   border-radius: 5px;
-  -webkit-box-shadow: 0px 4px 35px -10px var(--shadow-color);
-  -moz-box-shadow: 0px 4px 35px -10px var(--shadow-color);
-  box-shadow: 0px 4px 35px -10px var(--shadow-color);
 }
+#darkMode::after {
+  fill: white;
+}
+
 /* media query para sobremesas */
 @media screen and (min-width: 1025px) {
   body {
-    background-color: hsla(240, 62%, 58%, 1);
+    background-color: hsla(241, 47%, 52%, 1);
     background-image: radial-gradient(
-        at 37% 94%,
-        hsla(240, 62%, 58%, 1) 0px,
+        at 47% 100%,
+        hsla(240, 60%, 26%, 1) 0px,
         transparent 50%
       ),
-      radial-gradient(at 3% 43%, hsla(240, 45%, 41%, 1) 0px, transparent 50%),
-      radial-gradient(at 57% 35%, hsla(241, 47%, 52%, 1) 0px, transparent 50%);
+      radial-gradient(at 0% 0%, rgb(116, 142, 238) 0px, transparent 50%);
+    height: 100vh;
   }
   .container-register {
     display: flex;

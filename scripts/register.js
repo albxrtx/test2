@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     if (simbolos.test(inputValue)) {
-      error.textContent = "Contiene simbolos (!·$%&/()=+-*)";
+      error.textContent = "Contiene simbolos (!·$%&/)";
       nameInput.style.borderColor = "red";
       nameInput.style.outlineColor = "red";
       nameInput.style.color = "red";
