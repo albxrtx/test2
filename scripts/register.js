@@ -80,7 +80,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  let botonEye = document.getElementById("eye-icon");
+  let botonEye = document.getElementById("toggle-password");
   botonEye.addEventListener("click", function () {
     if (passInput.type == "password") passInput.type = "text";
     else passInput.type = "password";
