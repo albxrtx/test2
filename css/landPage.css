@@ -230,3 +230,20 @@ footer {
     gap: 20px;
   }
 }
+@media screen and (min-width: 1025px) {
+  header {
+    margin: 10px 300px;
+    #logo {
+      font-size: 24px;
+    }
+    #btn-Menu {
+      display: none;
+    }
+  }
+  .container-menu-hidden {
+    display: block;
+  }
+  .menu-list {
+    display: block;
+  }
+}
